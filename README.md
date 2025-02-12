@@ -1,3 +1,6 @@
+# SRN: PES1UG22CS568
+# Name: Shreevathsa Gorur Prashanth
+
 # A concert ticket booking system using pthreads
 A concert ticket booking system receives booking requests from multiple customers. In the real world scenario, if we don’t handle requests efficiently, the system might crash or slow down due to overwhelming demand. 
 
