@@ -1,6 +1,6 @@
 /*
-Name: Shreevathsa Gorur Prashanth
 SRN: PES1UG22CS568
+Name: Shreevathsa G P
 Subject: HP Pthreads Assignment
 */
 
