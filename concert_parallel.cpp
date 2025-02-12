@@ -17,8 +17,8 @@ Subject: HP Pthreads Assignment
 #define MAX_BUFFER_SIZE 5
 #define NUM_THREADS 5
 
-static volatile int available_tickets;
-static volatile bool processing_done;
+static int available_tickets;
+static bool processing_done;
 
 static int num_agents;
 
@@ -62,7 +62,6 @@ void *process_ticket_request(void *arg) {
     } else if (available_tickets <= 0) {
       std::cout << "Customer " << customer << " given 0 tickets\n";
     } else {
-      int tickets_left = tickets_needed - available_tickets;
       std::cout << "Customer " << customer << " given " << available_tickets
                 << " tickets\n";
       available_tickets = 0;
@@ -84,7 +83,7 @@ int main(void) {
 
   int initial_ticket_count;
   input_file >> initial_ticket_count;
-  available_tickets = reinterpret_cast<volatile int>(initial_ticket_count);
+  available_tickets = initial_ticket_count;
 
   processing_done = false;
   pthread_t thread_pool[NUM_THREADS];
